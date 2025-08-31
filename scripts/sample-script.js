@@ -4,7 +4,7 @@ async function main() {
   const Greeter = await hre.ethers.getContractFactory("CrowdFunding");
   const greeter = await Greeter.deploy();
   await greeter.waitForDeployment(); 
-  console.log("Greeter deployed to:",await greeter.getAddress());
+  console.log("CrowdFunding deployed to:",await greeter.getAddress());
 }
 
 main()
