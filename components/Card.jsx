@@ -1,6 +1,7 @@
 import { useContarct } from '@/context/contract';
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
+import Image from 'next/image';
 
 const Card = () => {
     const { Contarct, setopnepopup } = useContarct();
@@ -43,7 +44,7 @@ const Card = () => {
                     onClick={() => setopnepopup(true)}
                 >
                     {/* Image */}
-                    <img
+                    <Image width={250} height={250} 
                         className="w-full h-48 object-cover"
                         src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
                         alt="Campaign"
