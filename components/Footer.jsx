@@ -13,9 +13,9 @@ const Footer = () => {
                 }
             `}</style>
 
-        <footer className="flex flex-col items-center justify-center w-full py-20 bg-[#000] text-white/70">
+        <footer className="flex flex-col items-center justify-center w-full py-20 bg-[#000] ">
           <div className="flex justify-center items-center">
-            <Image src={"/crowdfunding(1).png"} width={250} height={250} alt="" className="md:w-10 md:h-10  w-7 h-7  bg-white rounded-full" />
+            <Image src={"/mk2-removebg-preview.png"} width={250} height={250} alt="" className="md:w-10 md:h-10  w-7 h-7   rounded-full" />
             <h1 className="md:text-2xl font-extrabold text-[#ffffff] tracking-wide  px-4 py-1 rounded-2xl flex justify-center items-center text-center">
 
               CrowdFunding

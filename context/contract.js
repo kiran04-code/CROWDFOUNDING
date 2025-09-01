@@ -7,10 +7,15 @@ const ContractContext = createContext(null);
 export const ContractContextProvider = ({ children }) => {
     const [accounts, setAccount] = useState("None")
     const [Contarct, setContarct] = useState()
+    const [opneOpup, setopnepopup] = useState(false)
     const ContarctAddress = "0x0C6fD424c9d4E70CC1Bd8Fea02715B6768263779";
     const getconnted = async () => {
         if (window.ethereum) {
             const account = await window.ethereum.request({ method: "eth_requestAccounts" })
+            await window.ethereum.request({
+                method: "wallet_switchEthereumChain",
+                params: [{ chainId: "0xaa36a7" }]
+            });
             console.log("ConnectedAccount", account[0])
             setAccount(account[0])
         } else {
@@ -23,12 +28,12 @@ export const ContractContextProvider = ({ children }) => {
             const signer = await provider.getSigner();
             const contract = new ethers.Contract(ContarctAddress, abi, signer)
             setContarct(contract)
-            console.log("Availble Contarct:", contract)
+            console.log("Availble Contarct:", Contarct)
         }
         Connection()
     }, [accounts])
 
-    return < ContractContext.Provider value={{ accounts, Contarct,getconnted }}>
+    return < ContractContext.Provider value={{ accounts, Contarct, getconnted, setopnepopup, opneOpup }}>
         {children}
     </ContractContext.Provider >
 

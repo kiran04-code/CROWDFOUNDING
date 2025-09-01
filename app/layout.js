@@ -3,6 +3,7 @@ import "./globals.css";
 import { Footer, Navbar } from "@/components";
 import { ContractContextProvider } from "@/context/contract";
 import { Ubuntu } from "next/font/google";
+import {Toaster} from "react-hot-toast"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${ubuntu.className} ${geistMono.variable} antialiased`}
       >
+        <Toaster position="top-right"/>
         <ContractContextProvider>
         <Navbar />
 

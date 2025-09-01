@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Left: Logo */}
         <div className="flex justify-center items-center">
-          <Image  src={"/crowdfunding(1).png"} width={250} height={250} alt="" className="w-10 h-10 bg-white rounded-full"/>
+          <Image  src={"/mk2-removebg-preview.png"} width={250} height={250} alt="" className="w-10 h-10  rounded-full"/>
           <h1 className="text-2xl font-extrabold text-[#ffffff] tracking-wide  px-4 py-1 rounded-2xl flex justify-center items-center text-center">
           
           CrowdFunding
@@ -76,7 +76,7 @@ const Navbar = () => {
           <p className="hover:text-blue-600 cursor-pointer transition">
             Members
           </p>
-          <button className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition">
+          <button className="flex items-center justify-center gap-2 bg-[#540688] text-white px-4 py-2 rounded-xl font-semibold shadow-md hover:bg-blue-700 transition">
             <Wallet size={18} /> Connect Wallet
           </button>
         </div>
